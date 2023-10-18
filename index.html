@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/png" href="./static/image/deer.png" />
+    <link rel="stylesheet" href="./static/css/style.css" />
+    <link rel="stylesheet" href="./static/css/prism.css" />
+    <script src="./static/script/prism.js" defer></script>
+    <link rel="import" href="./static/html/reactnote.html" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>麋鹿</title>
+  </head>
+  <body>
+    <div class="background-container"></div>
+    <header>
+      <ul>
+        <li><a href="#first">CSS</a></li>
+        <li><a href="#second">HTML</a></li>
+        <li><a href="#third">JavaScript</a></li>
+        <li><a href="#github">GitHub</a></li>
+        <li><a href="./static/html/reactnote.html">Game</a></li>
+      </ul>
+    </header>
+    <div class="content">
+      <section id="first" class="text">
+        <h1>CSS</h1>
+        <p>
+          去除链接下划线🔘 <strong>text-decoration: none;</strong
+          ><br />去除list的点🔘 <strong>list-style:none;</strong>
+          <br />悬浮时显示下划线🔘
+          <strong> a:hover{text-decoration: underline;}</strong
+          >&nbsp;&nbsp;&nbsp;a:hover 使用了冒号是因为它是 CSS
+          伪类（pseudo-class）的一种。 <br />设置圆角半径🔘
+          <strong> border-radius: 10px;</strong>
+          <br />头部引入CSS🔘
+          <strong> rel="stylesheet" href="style.css" </strong>
+        </p>
+      </section>
+      <section id="second">
+        <h1>HTML5</h1>
+        <p>
+          浏览器先下载HTML文件并解析,分词化HTML，将其转化为DOM元素。继续下载CSS文件，解析构建CSS对象模型树（CSSOM）。浏览器将DOM树和CSSOM树合并为渲染树。将渲染树中的每个元素转化为屏幕上的可见像素。
+        </p>
+      </section>
+      <section id="third">
+        <h1>JavaScript</h1>
+        <h2>"switch" 语句</h2>
+        <p>switch 语句可以替代多个 if 判断。</p>
+        <pre>
+            <code class="language-javascript">
+              let a = 3;
+
+              switch (a) {
+                case 4:
+                  alert('Right!');
+                  break;
+
+                case 3: // (*) 下面这两个 case 被分在一组
+                case 5:
+                  alert('Wrong!');
+                  alert("Why don't you take a math class?");
+                  break;
+
+                default:
+                  alert('The result is strange. Really.');
+              }
+            </code>
+        </pre>
+        <h2>“for” 循环</h2>
+        <pre>
+          <code class="language-javascript">
+            for (begin; condition; step) {
+              // ……循环体……
+            }
+          </code>
+        </pre>
+        <pre>
+          <code class="language-javascript">
+            for (let i = 0; i < 3; i++) { // 结果为 0、1、2
+              alert(i);
+            }            
+          </code>
+        </pre>
+        <h2>“while” 循环</h2>
+        <pre>
+              <code class="language-javascript">
+                let i = 0;
+                while (i < 3) { // 依次显示 0、1 和 2
+                  alert( i );
+                  i++;
+                }
+              </code>
+        </pre>
+      </section>
+      <section id="github">
+        <h1>GitHub</h1>
+        <a href="https://git-scm.com/book/zh/v2">Pro Git book </a>
+        <table class="mytable">
+          <tr>
+            <th>命令</th>
+            <th>用途</th>
+          </tr>
+          <tr>
+            <td>git init</td>
+            <td>在当前的文件夹中创建一个git仓库</td>
+          </tr>
+          <tr>
+            <td>git status</td>
+            <td>查看Git仓库当前的状态</td>
+          </tr>
+          <tr>
+            <td>git status -s</td>
+            <td>简短的git仓库状态输出</td>
+          </tr>
+          <tr>
+            <td>git diff</td>
+            <td>查看仓库的具体改变</td>
+          </tr>
+          <tr>
+            <td>git add</td>
+            <td>
+              将工作目录中的更改（修改、新文件、删除）添加到暂存区，也被称为索引（index）
+            </td>
+          </tr>
+          <tr>
+            <td>git reset</td>
+            <td>撤回不希望提交的更改</td>
+          </tr>
+          <tr>
+            <td>git commit -m "your message"</td>
+            <td>将暂存区中的更改保存到一个新的提交中</td>
+          </tr>
+          <tr>
+            <td>git commit -a -m</td>
+            <td>跳过使用暂存区域直接提交当前所有修改</td>
+          </tr>
+          <tr>
+            <td>git rm [文件名]</td>
+            <td>
+              从工作目录和暂存区中删除指定的文件，并将这个删除操作记录到暂存区。在下次提交时，这个文件就会从
+              Git 仓库中被删除。
+            </td>
+          </tr>
+          <tr>
+            <td>git rm --cached [文件名]</td>
+            <td>
+              这个命令会从暂存区中删除指定的文件，但是不会删除工作目录中的文件。
+            </td>
+          </tr>
+          <tr>
+            <td>git rm -f [文件名]</td>
+            <td>
+              强制删除工作目录和暂存区中的文件，即使这个文件在工作目录中有未提交的更改。!!!
+            </td>
+          </tr>
+          <tr>
+            <td>git mv</td>
+            <td>用于移动或重命名仓库中的文件</td>
+          </tr>
+          <tr>
+            <td>brew install git gui</td>
+            <td>安装git图形用户界面</td>
+          </tr>
+          <tr>
+            <td>touch .gitignore</td>
+            <td>创建gitignore文件，此文件需要放在git仓库的同级目录</td>
+          </tr>
+          <tr>
+            <td>git branch branchname</td>
+            <td>
+              添加新的branchname分支（新建的git仓库需要add和commit之后才能创建新的branch）
+            </td>
+          </tr>
+          <tr>
+            <td>git branch -a</td>
+            <td>查看当前的分支</td>
+          </tr>
+          <tr>
+            <td>git checkout branchname</td>
+            <td>更换到其他branchname分支</td>
+          </tr>
+          <tr>
+            <td>git config --list</td>
+            <td>列出当前所有git配置</td>
+          </tr>
+          <tr>
+            <td>git config user.name</td>
+            <td>检查 Git 的用户配置，更换后面的变量可以查看其他的配置</td>
+          </tr>
+          <tr>
+            <td>git help config</td>
+            <td>获得 git config 命令的手册</td>
+          </tr>
+          <tr>
+            <td>git add -h</td>
+            <td>获得更简明的 ``help'' 输出</td>
+          </tr>
+          <tr>
+            <td>git clone targetRepository</td>
+            <td>
+              Git 支持多种数据传输协议。https:// 协议，git:// 协议，SSH 传输协议
+            </td>
+          </tr>
+          <tr>
+            <td>cat .gitignore</td>
+            <td>
+              打印.gitignore文件的内容到终端。concatenate也就是cat是Unix-like操作系统中查看文件内容的命令行工具。
+            </td>
+          </tr>
+          <tr>
+            <td>git log</td>
+            <td>仓库的提交历史记录 --stat选项命令查看每次提交的简略统计信息</td>
+          </tr>
+          <tr>
+            <td>git log -p -2</td>
+            <td>只显示最近的两次提交</td>
+          </tr>
+        </table>
+        <h3>
+          Git 有三种状态，已修改（modified）、已暂存（staged 和
+          ）已提交（committed）。
+        </h3>
+        <ul>
+          <li>已修改表示修改了文件，但还没保存到数据库中。</li>
+          <li>
+            已暂存表示对一个已修改文件的当前版本做了标记，使之包含在下次提交的快照中。
+          </li>
+          <li>已提交表示数据已经安全地保存在本地数据库中。</li>
+        </ul>
+        <h3>.gitignore 的格式规范如下</h3>
+        <p>
+          glob 模式是指 shell 所使用的简化了的正则表达式。
+          星号（*）匹配零个或多个任意字符；[abc] 匹配任何一个列在方括号中的字符
+          （这个例子要么匹配一个 a，要么匹配一个 b，要么匹配一个 c）；
+          问号（?）只匹配一个任意字符；如果在方括号中使用短划线分隔两个字符，
+          表示所有在这两个字符范围内的都可以匹配（比如 [0-9] 表示匹配所有 0 到 9
+          的数字）。 使用两个星号（）表示匹配任意中间目录，比如 a//z 可以匹配
+          a/z 、 a/b/z 或 a/b/c/z 等。
+        </p>
+        <ul>
+          <li>所有空行或者以 # 开头的行都会被 Git 忽略。</li>
+          <li>可以使用标准的 glob 模式匹配，它会递归地应用在整个工作区中</li>
+          <li>匹配模式可以以（/）开头防止递归。</li>
+          <li>匹配模式可以以（/）结尾指定目录。</li>
+          <li>
+            要忽略指定模式以外的文件或目录，可以在模式前加上叹号（!）取反。
+          </li>
+        </ul>
+        <pre>
+          <code class="language-md">
+            # 忽略所有的 .a 文件
+            *.a
+
+            # 但跟踪所有的 lib.a，即便你在前面忽略了 .a 文件
+            !lib.a
+
+            # 只忽略当前目录下的 TODO 文件，而不忽略 subdir/TODO
+            /TODO
+
+            # 忽略任何目录下名为 build 的文件夹
+            build/
+
+            # 忽略 doc/notes.txt，但不忽略 doc/server/arch.txt
+            doc/*.txt
+
+            # 忽略 doc/ 目录及其所有子目录下的 .pdf 文件
+            doc/**/*.pdf
+          </code>
+        </pre>
+        <p>
+          git log --pretty 还有 short，full 和 fuller
+          选项，它们展示信息的格式基本一致。 <br />git log --pretty=format
+          常用的选项 %H 提交的完整哈希值 %h 提交的简写哈希值 %T 树的完整哈希值%t
+          树的简写哈希值%P 父提交的完整哈希值%p 父提交的简写哈希值%an 作者名字%a
+          作者的电子邮件地址%ad 作者修订日期（可以用 --date=选项 来定制格式）%ar
+          作者修订日期，按多久以前的方式显示%cn 提交者的名字%ce
+          提交者的电子邮件地址 %cd 提交日期%cr 提交日期（距今多长时间）%s
+          提交说明<br />
+          例子： $ git log --pretty=format:"%h - %an, %ar : %s"
+        </p>
+      </section>
+      <section>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae
+          doloribus ducimus aliquam minima magni facilis sunt sequi optio,
+          aliquid totam repudiandae, deleniti commodi enim corporis quos! Labore
+          id enim amet!
+        </p>
+      </section>
+    </div>
+  </body>
+</html>
