@@ -76,3 +76,22 @@ section {
 #github a:hover {
   text-decoration: underline;
 }
+
+#third a {
+  font-weight: bold;
+  color: rgb(67, 101, 163);
+  text-decoration: none;
+}
+
+#third a:hover {
+  text-decoration: underline;
+}
+
+#third ul {
+  display: flex; 
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  gap: 1rem;
+}
+

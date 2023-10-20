@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./static/css/style.css" />
     <link rel="stylesheet" href="./static/css/prism.css" />
     <script src="./static/script/prism.js" defer></script>
+    <script src="./static/script/third.js" defer></script>
     <link rel="import" href="./static/html/reactnote.html" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -92,11 +93,40 @@
                 }
               </code>
         </pre>
+        <ul class="link-list">
+          <li>
+            <a href="https://zh.javascript.info/closure" >🐇Scope 语句</a>
+          </li>
+          <li>
+            <a href="https://zh.javascript.info/modules-intro" >⭐️模块 Module</a>
+          </li>
+          <li>
+            <a
+              href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Template_literals"
+              >🌟模板字面量 Template Literals</a
+            >
+          </li>
+          <li>
+            <a href="https://zh.javascript.info/while-for" >🌕循环：while 和 for </a>
+          </li>
+          <li>
+            <a href="https://zh.javascript.info/switch" >🌔switch 语句</a>
+          </li>
+          <li>
+            <a href="https://zh.javascript.info/arrow-functions-basics" >🌗箭头函数 Arrow function </a>
+          </li>
+          <li>
+            <a href="https://zh.javascript.info/ifelse" >🌝条件分支：if 和 '?'</a>
+          </li>
+        </ul>
       </section>
       <section id="github">
         <h1>GitHub</h1>
         <a href="https://git-scm.com/book/zh/v2">Pro Git book </a>
-        <p><strong>push到远程仓库的链接设置</strong> git remote set-url origin https://令牌@github.com/用户名/仓库名</p>
+        <p>
+          <strong>push到远程仓库的链接设置</strong> git remote set-url origin
+          https://令牌@github.com/用户名/仓库名
+        </p>
         <table class="mytable">
           <tr>
             <th>命令</th>
@@ -218,8 +248,15 @@
             <td>只显示最近的两次提交</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
+            <td>git commit --amend</td>
+            <td>
+              用一个 新的提交替换旧的提交,git remote
+              -v可以避免小修改或者笔误带来的各种提交而导致仓库历史混乱
+            </td>
+          </tr>
+          <tr>
+            <td>git remote -v</td>
+            <td>显示需要读写远程仓库使用的 Git 保存的简写与其对应的 URL</td>
           </tr>
         </table>
         <h3>
