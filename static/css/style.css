@@ -3,9 +3,10 @@ body {
 }
 .background-container {
   position: fixed;
-  background-image: url(../image/jennie.jpg);
+  background-image: url(../image/jennieblue.webp);
   background-size: cover; /* 背景图片尺寸适应容器 */
-  filter: blur(10px); /* 模糊效果，数值可以调整 */
+  background-position: 50% 50%; 
+  filter: blur(6px); /* 模糊效果，数值可以调整 */
   top: 0;
   left: 0;
   width: 100%; /* 确保容器充满整个视口 */
@@ -22,8 +23,17 @@ header {
   justify-content: center;
   text-align: center;
   z-index: 100;
-  background-color: antiquewhite;
+  background-color: #bae6fd;
 }
+
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: column; /* 在小屏幕上，内容垂直堆叠 */
+    height: auto; /* 添加这一行来允许header的高度自动调整 */
+    overflow-y: auto; /* 添加这一行来允许在header内容超出视口时滚动 */
+  }
+}
+
 header a {
   color: black;
   text-decoration: none;
@@ -51,7 +61,7 @@ header li {
 
 section {
   padding: 20px;
-  background-color: rgb(192, 167, 145);
+  background-color: #bae6fd;
   margin: 20px;
   width: 80%;
   border-radius: 5px;
